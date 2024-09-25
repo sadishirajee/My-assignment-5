@@ -12,7 +12,7 @@
         <nav class="navbar ">
           <div class="navbar-start">
             <div class="flex-1">
-              <a class="btn btn-ghost w-24 bg-purple-500 text-xl">Blog</a>
+              <a class="btn btn-ghost w-24 bg-gradient-to-r from-cyan-400 to-blue-400 text-xl">Home</a>
             </div>
           </div>
           <div class="navbar-center">
@@ -32,32 +32,39 @@
         </nav>
     </header>
     <main>
-        <section>
+        <section class="my-5 mx-5">
+            <div class="flex">
+                <h2 class="text-xl font-bold">Important FAQ</h2>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" />
+                </svg>              
+            </div>
+        
             <div class="collapse collapse-arrow bg-base-200">
                 <input type="radio" name="my-accordion-2" checked="checked" />
                 <div class="collapse-title text-xl font-medium">What is the Document object model(DOM)?</div>
                 <div class="collapse-content">
-                  <p>hello</p>
+                  <p>The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of an HTML or XML document as a tree of objects, where each part of the document (like elements, attributes, and text) is an object that can be manipulated using programming languages like JavaScript.</p>
                 </div>
             </div>
             <div class="collapse collapse-arrow bg-base-200">
                 <input type="radio" name="my-accordion-2" />
                 <div class="collapse-title text-xl font-medium">How do you select an element from DOM?</div>
                 <div class="collapse-content">
-                  <p>hello</p>
+                  <p>You can select an element from the DOM using methods like document.getElementById("id"), document.querySelector("selector"), or document.getElementsByClassName("class").</p>
                 </div>
             </div>
             <div class="collapse collapse-arrow bg-base-200">
                 <input type="radio" name="my-accordion-2" />
                 <div class="collapse-title text-xl font-medium">What is the relevent delegation in the context of the DOM, and why it is useful?</div>
                 <div class="collapse-content">
-                  <p>hello</p>
+                  <p>delegation in the DOM is a technique where a single event listener is attached to a parent element to manage events from its child elements. It's useful for handling events efficiently</p>
                 </div>
                 <div class="collapse collapse-arrow bg-base-200">
                     <input type="radio" name="my-accordion-2" />
-                    <div class="collapse-title text-xl font-medium">How do you manupulate an elements attributes and styles using the DOM?</div>
+                    <div class="collapse-title text-xl font-medium">How do you manipulate an elements attributes and styles using the DOM?</div>
                     <div class="collapse-content">
-                      <p>hello</p>
+                      <p>using element.setAttribute("attribute", "value") one can manipulate an element's attributes.</p>
                     </div>
                 </div>
             </div>
