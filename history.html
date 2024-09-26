@@ -24,25 +24,43 @@
             <h2 class="font-bold">Donate For Bangladesh</h2>
           </div>
           <div class="navbar-end">
-              <label class="input input-bordered flex w-36 items-center gap-1">
-                <img src="assets/coin.png" alt="">
-                <input type="text" class="grow" placeholder="0 BDT" />
-              </label>
+            <label class="input input-bordered flex w-36 items-center gap-1">
+              <img src="assets/coin.png" alt="">
+              <div id="main-balance" class="stat-title">10000 BDT</div>
+            </label>
           </div>
         </nav>
         <div class="navbar-center flex justify-center gap-5 my-5">
-          <a class="btn btn-outline text-lg gap-5 w-24">Donation</a>
+          <a class="btn btn-outline text-lg gap-5 w-24" href="index.html">Donation</a>
           <a class="btn btn-outline text-lg gap-5 w-24">History</a>
         </div>
     </header>
     <main>
-        <div class="collapse bg-base-200">
-            <input type="checkbox" />
-            <div class="collapse-title text-xl font-medium">Click me to show/hide content</div>
-            <div class="collapse-content">
-              <p>hello</p>
-            </div>
-        </div>
+        <!-- history........ -->
+         <div id="tran-history">
+          <h2 class="font-bold text-xl text-center">Tranjection History</h2>
+
+         </div>
     </main>
+    <script>
+      // Get the history from localStorage
+      const history = JSON.parse(localStorage.getItem('transactionHistory')) || [];
+
+      // Get the element where the history will be displayed
+      const historyContainer = document.getElementById('tran-history');
+
+      // Check if there is any history
+      if (history.length === 0) {
+          historyContainer.innerHTML = '<p>No transactions yet.</p>';
+      } else {
+          // Loop through the history and display each transaction
+          history.forEach(function(transaction) {
+              const p = document.createElement('p');
+              p.innerText = `Amount Donated: ${transaction.amount} BDT, New Balance: ${transaction.newBalance} BDT, Date: ${transaction.date}`;
+              historyContainer.appendChild(p);
+          });
+      }
+  </script>
+    <script src="js/donation.js"></script>
 </body>
 </html>
