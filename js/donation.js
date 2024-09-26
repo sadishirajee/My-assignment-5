@@ -36,7 +36,7 @@ document.getElementById('btn-add-money')
 
         // alert('Donation successful!');
         const modal = document.getElementById('donation-success-modal');
-        modal.showModal();  // Open the modal
+        modal.showModal();  
 
     } else {
         alert('Failed to add money, please try again later')
@@ -81,7 +81,7 @@ document.getElementById('feni-btn')
 
         // alert('Donation successful!');
         const modal = document.getElementById('donation-success-modal');
-        modal.showModal();  // Open the modal
+        modal.showModal();  
 
 
 
@@ -129,7 +129,7 @@ document.getElementById('quota-btn')
 
         // alert('Donation successful!');
         const modal = document.getElementById('donation-success-modal');
-        modal.showModal();  // Open the modal
+        modal.showModal();  
 
 
 
@@ -145,5 +145,5 @@ document.getElementById('quota-btn')
 // Event listener to close the modal
 document.getElementById('close-modal-btn').addEventListener('click', function() {
     const modal = document.getElementById('donation-success-modal');
-    modal.close();  // Close the modal
+    modal.close();  
 });
