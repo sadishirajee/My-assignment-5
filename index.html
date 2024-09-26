@@ -139,7 +139,20 @@
     </main>
 
 
-    <footer></footer>
+    <footer>
+       <!-- Modal Structure -->
+        <dialog id="donation-success-modal" class="modal">
+          <div class="modal-box  max-w-80 flex flex-col justify-center items-center text-center">
+            <h3 class="text-lg font-bold">Congrates!</h3>
+            <img src="assets/coin.png" alt="">
+            <p class="py-4">You have donated for humankind</p>
+            <h3 class="font-bold">Successfully</h3>
+              <div class="modal-action">
+                  <button id="close-modal-btn" class="btn">Close confirmation</button>
+              </div>
+          </div>
+        </dialog>
+    </footer>
     <script src="js/donation.js"></script>
 </body>
 </html>

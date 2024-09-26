@@ -27,14 +27,16 @@ document.getElementById('btn-add-money')
         const transaction = {
             amount: addmoneynumber,
             newBalance: newmoney,
-            date: new Date().toLocaleString()  // Store the current date and time
+            date: new Date().toLocaleString() 
         };
 
         let history = JSON.parse(localStorage.getItem('transactionHistory')) || [];
-        history.push(transaction);  // Add the new transaction to the history array
+        history.push(transaction);  
         localStorage.setItem('transactionHistory', JSON.stringify(history)); 
 
         // alert('Donation successful!');
+        const modal = document.getElementById('donation-success-modal');
+        modal.showModal();  // Open the modal
 
     } else {
         alert('Failed to add money, please try again later')
@@ -66,6 +68,21 @@ document.getElementById('feni-btn')
 
         document.getElementById('feni-money').innerText = feniDonation;
         document.getElementById('main-balance').innerText = newmoney;
+
+        const transaction = {
+            amount: feniDonation,
+            newBalance: newmoney,
+            date: new Date().toLocaleString() 
+        };
+
+        let history = JSON.parse(localStorage.getItem('transactionHistory')) || [];
+        history.push(transaction);  
+        localStorage.setItem('transactionHistory', JSON.stringify(history)); 
+
+        // alert('Donation successful!');
+        const modal = document.getElementById('donation-success-modal');
+        modal.showModal();  // Open the modal
+
 
 
     } else {
@@ -100,8 +117,33 @@ document.getElementById('quota-btn')
         document.getElementById('quotahelp').innerText = quotaDonation;
         document.getElementById('main-balance').innerText = newmoney;
 
+        const transaction = {
+            amount: addmoneyquota,
+            newBalance: newmoney,
+            date: new Date().toLocaleString() 
+        };
+
+        let history = JSON.parse(localStorage.getItem('transactionHistory')) || [];
+        history.push(transaction);  
+        localStorage.setItem('transactionHistory', JSON.stringify(history)); 
+
+        // alert('Donation successful!');
+        const modal = document.getElementById('donation-success-modal');
+        modal.showModal();  // Open the modal
+
+
 
     } else {
         alert('Failed to add money, please try again later')
     }
 })
+
+
+
+
+
+// Event listener to close the modal
+document.getElementById('close-modal-btn').addEventListener('click', function() {
+    const modal = document.getElementById('donation-success-modal');
+    modal.close();  // Close the modal
+});
